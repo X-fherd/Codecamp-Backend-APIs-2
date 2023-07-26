@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-app.use(express.static(absolutePath = _dirname + "/public/style.css"));
+app.use("/public", express.static(absolutePath = _dirname + "/public"));
 
 //console.log("Hello World")
 
