@@ -1,5 +1,6 @@
 let express = require('express');
 let app = express();
+app.use(absolutePath = __dirname + "/public", express.static());
 
 //console.log("Hello World")
 
