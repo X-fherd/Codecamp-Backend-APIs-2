@@ -1,3 +1,4 @@
+require('dotenv').config()
 let express = require('express');
 let app = express();
 app.use(express.static("/public"))
@@ -10,6 +11,7 @@ app.get("/", function(req, res){
 })
 
 app.get("/json", function(req, res){
+    process.env.MESSAGE_STYLE;
     res.json({"message": "Hello json"});
 })
 
