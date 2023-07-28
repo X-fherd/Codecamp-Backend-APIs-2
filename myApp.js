@@ -11,7 +11,8 @@ app.get("/", function(req, res){
 })
 
 app.get("/json", function(req, res){
-    res.json.process.env.MESSAGE_STYLE({"message": "Hello json"});
+    process.env.MESSAGE_STYLE;
+    res.json({"message": "Hello json"});
 })
 
 
