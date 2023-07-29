@@ -23,8 +23,12 @@ app.get("/json", function(req, res){
     
 })
 
+function getCurrentTime(){
+    return new Date().toString();
+}
+
 app.get("/now", (req, res, next) => {
-    req.time = new Date().toString();
+    req.time = getCurrentTime();
     next();
 },(req, res) =>{
     res.json({"time": req.time});
