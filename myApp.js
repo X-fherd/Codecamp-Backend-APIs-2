@@ -3,6 +3,10 @@ let express = require('express');
 let app = express();
 app.use(express.static("/public"))
 app.use("/public", express.static(absolutePath = __dirname + "/public"));
+app.use((req, res, next)=> {
+    console.log(req.method, req.path, req.ip)
+    next();
+} )
 
 //console.log("Hello World")
 
