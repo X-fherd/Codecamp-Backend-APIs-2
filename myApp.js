@@ -41,7 +41,7 @@ app.get('/:word/echo', (req, res) => {
 
 
 app.get('/name', (req, res) => {
-    res.json({name: req.query('?first=firstname&last=lastname')});
+    res.json({name: req.query.last + " " + req.query.last});
 })
 
 
