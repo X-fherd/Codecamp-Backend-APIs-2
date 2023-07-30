@@ -27,12 +27,16 @@ function getCurrentTime(){
     return new Date().toString();
 }
 
-app.get("/now", (req, res, next) => {
-    req.time = getCurrentTime();
+function getCurrentTime(){
+    return new Date().toString();
+}
+
+app.get('/now', (req, res, next) => {
+    req.time = getTheCurrentTime(); 
     next();
-},(req, res) =>{
+  }, (req, res) => {
     res.json({time: req.time});
-});
+  });
 
 
 
