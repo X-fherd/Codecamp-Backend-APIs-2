@@ -23,11 +23,7 @@ app.get("/json", function(req, res){
     
 })
 
-function getCurrentTime(){
-    return new Date().toString();
-}
-
-function getCurrentTime(){
+function getTheCurrentTime(){
     return new Date().toString();
 }
 
